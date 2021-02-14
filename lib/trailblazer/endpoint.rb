@@ -131,20 +131,20 @@ module Trailblazer
     end
 
     # FIXME: name will change! this is for controllers, only!
-    def self.advance_from_controller(endpoint, success_block:, failure_block:, protocol_failure_block: protocol_failure_block, **argument_options)
-      args = Trailblazer::Endpoint.arguments_for(argument_options)
+    # def self.advance_from_controller(endpoint, success_block:, failure_block:, protocol_failure_block: protocol_failure_block, **argument_options)
+    #   args = Trailblazer::Endpoint.arguments_for(argument_options)
 
-      signal, (ctx, _ ) = Trailblazer::Endpoint.with_or_etc(
-        endpoint,
-        args[0], # [ctx, flow_options]
+    #   signal, (ctx, _ ) = Trailblazer::Endpoint.with_or_etc(
+    #     endpoint,
+    #     args[0], # [ctx, flow_options]
 
-        success_block:          success_block,
-        failure_block:          failure_block,
-        protocol_failure_block: protocol_failure_block,
-      )
+    #     success_block:          success_block,
+    #     failure_block:          failure_block,
+    #     protocol_failure_block: protocol_failure_block,
+    #   )
 
-      ctx
-    end
+    #   ctx
+    # end
   end
 end
 #       created: Dry::Matcher::Case.new(
